@@ -1,0 +1,13 @@
+spring:
+  data:
+    cassandra:
+      keyspace-name: myKeyspace
+      contact-points: 127.0.0.1
+      port: 9042
+      
+server:
+  port: 8084
+  
+logging:
+  level:
+    com.ssinghal: DEBUG
