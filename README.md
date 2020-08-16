@@ -32,14 +32,10 @@
    ```
    docker run cassandra-example -p 8084:8084 cassandra-example
    ```
-<<<<<<< HEAD
 
 # Start Application With Kubernetes
 
  - Run cassandra 
-=======
-   docker build -f Dockerfile -t cassandra-example
->>>>>>> 6396d151f32675de026f1fe8c620e217853dedbe
    ```
    kubectl create -f cassandra-deployment.yaml
    ```
@@ -48,9 +44,3 @@
    ```
    kubectl create -f deployment.yaml
    ```
-<<<<<<< HEAD
- 
-=======
-   docker run -p 8084:8084 cassandra-example
-   ```
->>>>>>> 6396d151f32675de026f1fe8c620e217853dedbe
