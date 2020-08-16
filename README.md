@@ -1,21 +1,47 @@
+# Build Application
+  - Gradle build
+     
+     ```
+     gradle build
+      ```
+
+  - Learn Docker version
+    ```
+    docker -v
+    ```
+
+  - Build docker 
+    ```
+    docker build . -t cassandra-example
+    ```
+
+  - Show docker builded images
+    ```
+    docker images
+    ```
+
+
 # Start Application With Docker
- - Learn Docker version
-   ```
-   docker -v
-   ```
+
  - Run cassandra 
    ```
    docker run --name my-cassandra -d -P -p 9042:9042 cassandra:2.2.11
    ```
- - Build docker in root directory
-   ```
-   docker build -f Dockerfile -t spring-cassandra-crud-example
-   ```
- - Show docker builded images
-   ```
-   docker images
-   ```
+
  - Run docker image with exposed port 
    ```
-   docker run -p 8084:8084 spring-cassandra-crud-example
+   docker run cassandra-example -p 8084:8084 cassandra-example
    ```
+
+# Start Application With Kubernetes
+
+ - Run cassandra 
+   ```
+   kubectl create -f cassandra-deployment.yaml
+   ```
+
+ - Run cassandra-example
+   ```
+   kubectl create -f deployment.yaml
+   ```
+ 
